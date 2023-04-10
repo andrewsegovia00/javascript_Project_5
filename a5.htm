@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="a5_style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <title>Assignment #5</title>
+
+    <script src="hyperlinks5.js"></script>
+    <script src="regularJavText.js"></script>
+</head>
+
+<body>
+
+    <div class="outerOuterBox">
+        <div class="outerBox">
+            <div id="jqLinks" class="hyperlinks">
+                <a href="../Assignment #1/a1.htm">Assignment #1</a><br>
+                <a href="../Assignment #2/a2.htm">Assignment #2</a><br>
+                <a href="../Assignment #3/a3.htm">Assignment #3</a><br>
+                <a href="../Assignment #4/a4.htm">Assignment #4</a><br>
+                <h2 class="header">
+                    Assignment #5
+                </h2>
+            </div>
+            <div class="overallText" id="overallText">
+                <span id="cookieBaked" class="errorMessage"></span>
+                <form name="myForm">
+                    <br>
+                    Please enter your name<br>
+                    <input type="text" id="userName">
+                    <span id="userNameError" class="errorMessage"></span>
+                    <br><br>
+
+                    Please enter a number<br>
+                    <input type="text" id="userNum">
+                    <span id="userNumError" class="errorMessage"></span><br><br>
+
+                    Please enter a verb that starts<br>with "r" and ends in "ing"<br>
+                    <input type="text" id="userVerb" size="15">
+                    <span id="userVerbError" class="errorMessage"></span><br><br>
+
+                    Which is your favorite Cheesecake?<br>
+                    <select id="cheesecake">
+                        <option value="select">Select from the Menu</option>
+                        <option value="Oreo Cheesecake">Oreo Cheesecake</option>
+                        <option value="New York Cheesecake">New York Cheesecake</option>
+                        <option value="Japanese Cheesecake">Japanese Cheesecake</option>
+                        <option value="Strawberry Cheesecake">Strawberry Cheesecake</option>
+                        <option value="White Chocolate Rasberry">White Chocolate Rasberry</option>
+                        <option value="Chocolate Mousse Cheesecake">Chocolate Mousse Cheesecake</option>
+                    </select>
+                    <span id="cheesecakeError" class="errorMessage"></span><br><br>
+
+                    <input type="button" value="Submit" id="checkBTN">
+                </form>
+            </div>
+</body>
+
+</html>

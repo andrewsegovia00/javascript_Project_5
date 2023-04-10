@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Retrieve and Display Cookie Data</title>
+	<link rel="stylesheet" href="a5_style.css">
+	<script src="https://code.jquery.com/jquery-3.6.1.js"
+		integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<script src="hyperlinks5.js"></script>
+	<script>
+
+		const cakeArray = new Array("oreocheesecake.jpg", "newyorkcheesecake.jpg", "japanesecheesecake.jpg", "strawberrycheesecake.jpg", "whitechocolaterasberry.jpg", "chocolatemoussecheesecake.jpg");
+		for (let i = 0; i < cakeArray.length; i++) {
+			const cheesecakeImg = new Image();
+			cheesecakeImg.src = "cheeseCakeImages/" + cakeArray[i];
+		}
+
+		//for Chrome, cookies won't work locally. You have to test from a web server. Test using any browser except for Chrome.
+		document.addEventListener("DOMContentLoaded", function () {
+			const splittingCookies = decodeURI(document.cookie);
+			const myCookieIngredients = splittingCookies.split("\n");
+
+			document.getElementById("div1").innerHTML = "Congratulations " + myCookieIngredients[0].toUpperCase() + "!";
+			document.getElementById("div2").innerHTML = "You have won the naming contest and your city is now known as the " + myCookieIngredients[2] + " city";
+			document.getElementById("div3").innerHTML = "The city of " + myCookieIngredients[2] + " has awarded you " + myCookieIngredients[1];
+			document.getElementById("div4").innerHTML = "of their best " + myCookieIngredients[4] + "(s)!";
+			// <img src="images/win.jpg" id="theImage">
+			document.getElementById("div5").innerHTML = "<img class='cakes' src=cheeseCakeImages/" + myCookieIngredients[3] + ">";
+
+		}
+		);
+
+		function nameLess() {
+			document.location = "a5.htm";
+		}
+
+
+
+	</script>
+</head>
+
+<body>
+	<div class="outerBox">
+		<div id="jqLinks" class="hyperlinks2">
+			<a href="/Assignment #1/documents/a1.htm">Assignment #1</a><br>
+			<a href="../Assignment #2/a2.htm">Assignment #2</a><br>
+			<a href="../Assignment #3/a3.htm">Assignment #3</a><br>
+			<a href="../Assignment #4/a4.htm">Assignment #4</a><br>
+			<a href="a5.htm">Assignment #5</a><br>
+		</div>
+		<div id="div0" class="cookieStyle"><br>
+			<div style="font-weight: bold; font-size: 50px;">You've Earned a Prize!</div><br><br>
+			<div id="div1"></div><br>
+			<div id="div2"></div><br>
+			<div id="div3"></div><br>
+			<div id="div4"></div><br>
+			<div id="div5"></div><br>
+		</div>
+	</div>
+</body>
+
+</html>
